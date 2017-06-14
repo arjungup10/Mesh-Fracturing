@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<title>Mesh Fracturing</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card-2">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#overview" class="w3-bar-item w3-button w3-padding-large w3-hide-small">OVERVIEW</a>
+    <a href="#samples" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SAMPLES</a>
+    <a href="#resources" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESOURCES</a>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#overview" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+  <a href="#samples" class="w3-bar-item w3-button w3-padding-large">OVERVIEW</a>
+  <a href="#samples" class="w3-bar-item w3-button w3-padding-large">SAMPLES</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">RESOURCES</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/w3images/la.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Title</h3>
+      <p><b>Text</b></p>
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/w3images/ny.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Title</h3>
+      <p><b>Text</b></p>
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/w3images/chicago.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Title</h3>
+      <p><b>Text</b></p>
+    </div>
+  </div>
+
+  <!-- The Overview Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="overview">
+    <h2 class="w3-wide w3-center">Mesh Fracturing</h2>
+    <p class="w3-opacity  w3-center"><i>by Arjun Gupta</i></p>
+    <p class="w3-justify">The following is a basic mesh fracturing application built in openGL.
+      The program leverages the use of a geometry shader in order to create individual fragments of an object.
+      The geometry shader calculates the normals of each individual fragment and translates the fragment in the direction of its normal.</p>
+   <h3>Technologies Used</h3>
+   <p>
+     <ul class="w3-ul" style="padding-left:10px">
+        <li>Texture Mapping</li>
+        <li>Pitch & Yaw</li>
+        <li>Collision Detection</li>
+        <li>Geometry Shader</li>
+     </ul>
+  </p>
+   <h3>Features</h3>
+   <p>
+     <ul class="w3-ul" style="padding-left:10px">
+        <li>Randomly generated world of 100 objects</li>
+        <li>Free camera movement</li>
+        <li>Mouse click detection using axis aligned bounding boxes</li>
+        <li>User can control time of the world</li>
+     </ul>
+  </p>
+    <h3>Controls</h3>
+    <p>
+      <ul class="w3-ul" style="padding-left:10px">
+         <li>WASD and mouse to move around the world</li>
+         <li>Click on a mesh to fracture it</li>
+         <li>Right and Left arrow keys control "time"</li>
+         <li>Up and Down arrow keys control the speed of "time"</li>
+         <li>Spacebar stops "time"</li>
+      </ul>
+   </p>
+  </div>
+
+  <!-- The Samples Section -->
+  <div class="w3-black" id="samples">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">Samples</h2>
+      <p class="w3-opacity w3-center"><i></i>Video & Images</p><br>
+
+    </div>
+  </div>
+
+  <!-- The Resources Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="resources">
+    <h2 class="w3-wide w3-center">Resources</h2>
+    <p class="w3-opacity w3-center">
+      <i><a href="https://learnopengl.com/#!Advanced-OpenGL/Geometry-Shader">Geometry Shader - Learn OpenGL</i> <br />
+      <i><a href="http://www.opengl-tutorial.org/miscellaneous/clicking-on-objects/">Clicking on objects - OpenGL-Tutorial.org</i> <br />
+   </p>
+  </div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://github.com/arjungup10">
+  <i class="fa fa-github w3-hover-opacity"></i>
+  <a href="https://www.linkedin.com/in/arjun-gupta/">
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 4000);
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
