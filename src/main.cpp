@@ -401,7 +401,6 @@ static void initGeom() {
 
 	for (int i = 0; i<100; i++) {
 		positions[i] = glm::vec3(rand() % 20 - 10, rand() % 20, rand() % 20 - 10);
-		//orientations[i] = glm::quat(glm::vec3(rand() % 360, rand() % 360, rand() % 360));
 		explosions[i] = 0;
 
 	}
@@ -546,27 +545,27 @@ static void render()
 
 	prog0->unbind();
 
-	//draw the world sphere	
-	prog1->bind();
-   texture1->bind(prog1->getUniform("Texture1"));
-   glUniform1f(prog0->getUniform("myTime"), myTime);
-	glUniformMatrix4fv(prog0->getUniform("P"), 1, GL_FALSE, value_ptr(P->topMatrix()));
-	glUniformMatrix4fv(prog0->getUniform("V"), 1, GL_FALSE, value_ptr(V));
-	
-	M->pushMatrix();
-	M->translate(vec3(1, 0, -5));
-	glUniform1f(prog0->getUniform("myTime"), myTime);
-	glUniform1i(prog0->getUniform("timePause"), timePause);
-	glUniformMatrix4fv(prog0->getUniform("M"), 1, GL_FALSE, value_ptr(M->topMatrix()));
-	glUniformMatrix4fv(prog0->getUniform("V"), 1, GL_FALSE, value_ptr(V));
-    
-	world->draw(prog1);
-	
-	glDisableVertexAttribArray(0);
-	glDisableVertexAttribArray(1);
-	glDisableVertexAttribArray(2);
-	M->popMatrix();
-	prog1->unbind();
+	////draw the world sphere	
+	//prog1->bind();
+ //  texture1->bind(prog1->getUniform("Texture1"));
+ //  glUniform1f(prog0->getUniform("myTime"), myTime);
+	//glUniformMatrix4fv(prog0->getUniform("P"), 1, GL_FALSE, value_ptr(P->topMatrix()));
+	//glUniformMatrix4fv(prog0->getUniform("V"), 1, GL_FALSE, value_ptr(V));
+	//
+	//M->pushMatrix();
+	//M->translate(vec3(1, 0, -5));
+	//glUniform1f(prog0->getUniform("myTime"), myTime);
+	//glUniform1i(prog0->getUniform("timePause"), timePause);
+	//glUniformMatrix4fv(prog0->getUniform("M"), 1, GL_FALSE, value_ptr(M->topMatrix()));
+	//glUniformMatrix4fv(prog0->getUniform("V"), 1, GL_FALSE, value_ptr(V));
+ //   
+	//world->draw(prog1);
+	//
+	//glDisableVertexAttribArray(0);
+	//glDisableVertexAttribArray(1);
+	//glDisableVertexAttribArray(2);
+	//M->popMatrix();
+	//prog1->unbind();
 
 	//draw the ground plane	
 	prog2->bind();
@@ -706,7 +705,7 @@ int main(int argc, char **argv)
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
 
 	// Create a windowed mode window and its OpenGL context.
-	window = glfwCreateWindow(g_width, g_height, "textures", NULL, NULL);
+	window = glfwCreateWindow(g_width, g_height, "Mesh Fracturing", NULL, NULL);
 	if(!window) {
 		glfwTerminate();
 		return -1;
